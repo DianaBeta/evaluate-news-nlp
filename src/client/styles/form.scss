@@ -1,0 +1,31 @@
+form {
+    background-color: #ffffff;
+    border-radius: 3px;
+    padding: 40px;
+
+}
+
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+}
+
+#submit{
+    background-color: #ff748c;
+    color:white;
+    border-radius: 4px;
+}
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #eee;
+  }
+  
+  .no-outline:focus {
+    outline: none;
+  }

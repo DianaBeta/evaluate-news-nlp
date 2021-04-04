@@ -1,0 +1,39 @@
+
+$font-stack: Arial, Helvetica, sans-serif;
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-stack;
+    
+    
+}
+
+main {
+    flex: 2;
+    background-color: #ffd1dc;
+    
+ 
+    
+}
+
+section {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+.results{
+    padding:20px; 
+}
+#results1,#results2,#results3{
+    padding:20px;  
+}
+h1,h2{
+    //padding: top. right,bottom, left
+    padding:10px 10px 0px 0px;
+    margin: 20px;
+}
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    padding: 20px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Evaluate a news article with Natural language processing</title>
+    </head>
+
+    <body>
+
+        <main>
+        <section class = card>
+        <h1>Evaluating a news article with Natural language processing</h1>
+            <section class = instructions>
+                <h2>Instructions:</h2> 
+                    <ol>
+                        <li>Type the URL of the article you want us to analyze. </li>
+                        <li>When you click the button the result will appear.</li>
+                        <li>The score tag determines if the tone of the article is positive or negative.</li>
+                        <li>The Confidence Score, or Classification Threshhold, indicates how certain the NLP Service 
+                            / Machine Learning Model is that the respective intent has been assigned correctly. 
+                            The score can have a value between 0 and 100.</li>
+                        <li>The agreement value refers to harmony or accordance in the opinions or feelings expressed in the article.</li>
+                    </ol>
+            </section>
+            <section>
+                <form class="box" onsubmit="return Client.handleSubmit(event)">
+                    <div class = "">
+                        Please type a URL
+                    </div>
+                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="https://en.wikipedia.org/wiki/Natural_language_processing">
+                    <input id= "submit" type="submit" name="" value="Evaluate" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+            </section>
+
+            <section>
+                <div class = results> 
+                    <h3>Results: </h3>
+                    <div id="results1"></div>
+                    <div id="results2"></div>
+                    <div id="results3"></div>
+                </div>
+            </section>
+        </section>
+        </main>
+
+        <footer>
+            <p>By Diana Betancourt all rights reserved</p>
+        </footer>
+        <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+       </script>
+    </body>
+</html>
