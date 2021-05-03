@@ -45,10 +45,12 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 //POST route: sends the data to the project endpoint
+//req is the request from the front end in this case is the user input
 app.post('/api', function (req, res) {
     console.log('/api called via post request')
     console.log(req.body.text);
     
+    //api response
     getSentiment(baseURL, req.body.text, textapi).then(
         apiResponse => {
         console.log(apiResponse)

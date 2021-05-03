@@ -8,8 +8,9 @@ function handleSubmit(event) {
 
     console.log("::: Form Submitted :::")
     
+    //function call to send the userinput to the server
     postData('http://localhost:8081/api', {text: formText}).then(
-      function(res) {
+      function(res) {//response from the server
         if (res.score_tag == "P"){
           document.getElementById('results1').innerHTML = `Score tag: Positive`
         }
@@ -24,6 +25,7 @@ function handleSubmit(event) {
     )
     }
 
+    //function definition to send the user input "data" to the url, in this case the route of my server
     const postData = async ( url = '', data = {})=>{
       console.log(data);
         const response = await fetch(url, {
